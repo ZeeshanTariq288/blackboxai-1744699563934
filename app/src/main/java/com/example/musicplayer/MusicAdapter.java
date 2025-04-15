@@ -25,6 +25,11 @@ public class MusicAdapter extends RecyclerView.Adapter<MusicAdapter.MusicViewHol
         this.listener = listener;
     }
 
+    public void updateList(List<ItemsModel> newList) {
+        items = newList;
+        notifyDataSetChanged();
+    }
+
     @NonNull
     @Override
     public MusicViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
